@@ -1,0 +1,51 @@
+import './About.css';
+
+import Header from './Header';
+import BottomBar from './BottomBar';
+import Button from './Button';
+
+const About = () => {
+  return (
+    <div className="App">
+      <Header />
+      <div className="home__container">
+        <div className="home__content">
+          <div className="home__content__text">
+            <div>
+              <h1>About Me 👨</h1>
+              <p>A brief intro to who i am and how i do what i do:</p>
+            </div>
+            <div>
+              <p>
+                I am <span className="highlighted-text">MUHESH</span>
+              </p>
+            </div>
+            <div>
+              <p>
+                A Sophomore Computer Science student from India. I got into tech
+                while i was student at olabisi onabanjo university, Bsc Zoology.
+                I've always been fascinated with how things work. fast forward
+                to 2 years later and i'm now designing landing pages for
+                business around the world.
+              </p>
+            </div>
+            <div>
+              <p>
+                I believe i've got the right skills and technologies to take
+                your online presence on the level it truly deserves. Your
+                website should be your no1 sales agent and its works 24/7, Get a
+                quote now that's best for your business.
+              </p>
+            </div>
+          </div>
+          <div className="home__content__btn">
+            <Button buttonText="Say Hello" />
+          </div>
+        </div>
+      </div>
+      <BottomBar />
+    </div>
+  );
+};
+
+export default About;

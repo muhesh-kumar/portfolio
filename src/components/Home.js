@@ -1,12 +1,9 @@
 import './Home.css';
-import Header from './Header';
 import Button from './Button';
-import BottomBar from './BottomBar';
 
 const Home = () => {
   return (
     <div className="home__container">
-      <Header />
       <div className="home__content">
         <div className="home__content__text">
           <div>
@@ -22,9 +19,6 @@ const Home = () => {
           <Button buttonText="Say Hello" />
         </div>
       </div>
-      {/* <div className="bottom__content"> */}
-      <BottomBar />
-      {/* </div> */}
     </div>
   );
 };

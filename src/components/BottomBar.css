@@ -13,7 +13,8 @@
   z-index: 100;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 
   /* white */
@@ -36,6 +37,8 @@
   padding: 1rem;
 }
 
-/* .selected {
-  background-color: ;
-} */
+.active {
+  transition: color 0.5s ease-in 0.3s;
+  /* background-color: #188aec; */
+  /* color: white; */
+}

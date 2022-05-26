@@ -36,6 +36,11 @@ picture {
   display: block;
 }
 
+/* remove underline from links */
+a {
+  text-decoration: none;
+}
+
 /* make forms elements easier to work with */
 input,
 button,
@@ -60,17 +65,13 @@ select {
   }
 }
 
-body {
-  /* background-image: linear-gradient(
-    60deg,
-    rgba(79, 189, 243, 1) 35%,
-    rgba(53, 121, 243, 1) 100%
-  );
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center; */
+/* ----------------STYLING STARTS HERE------------------ */
 
-  /* display: flex; */
-  /* justify-content: center; */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   /* align-items: center; */
 }

@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 
+.header__container {
+  position: fixed;
+  width: 100%;
+  top: 0rem;
+  left: 0rem;
+  background-color: white;
+  padding: 1.3rem;
+  padding-inline: 4rem;
+  z-index: 100;
+}
+
 .header__text {
   font-family: 'Yellowtail', cursive;
   font-size: 3rem;
