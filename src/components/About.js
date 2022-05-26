@@ -42,6 +42,10 @@ const About = () => {
             <Button buttonText="Say Hello" />
           </div>
         </div>
+
+        {/* Background blur boxes */}
+        <div className="blur-ellipse be-1"></div>
+        <div className="blur-ellipse be-2"></div>
       </div>
       <BottomBar />
     </div>
