@@ -1,0 +1,27 @@
+.bottom-bar__container {
+  display: flex;
+  justify-content: space-evenly;
+  /* gap: 1.5rem; */
+
+  /* white */
+  background: #ffffff;
+
+  /* gray/100 */
+  border: 1px solid #f3f4f6;
+  box-shadow: -24px 24px 64px rgba(17, 17, 17, 0.11);
+  border-radius: 24px;
+
+  padding: 0.5rem;
+  padding-inline: 1.5rem;
+  /* padding: 12px, 50px, 12px, 50px; */
+}
+
+.bottom-bar__icon-container {
+  background-color: #f3f4f6;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+/* .selected {
+  background-color: ;
+} */
