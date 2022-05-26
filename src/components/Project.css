@@ -1,0 +1,28 @@
+.project-container {
+  display: flex;
+  gap: 5rem;
+}
+
+.project-container__text {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.project-name {
+  font-size: 2.25rem;
+}
+
+.project-container .project-description {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.project-container__image img {
+  /* border-radius: 0.8rem; */
+
+  /* blue/500 */
+  border: 1px solid #3b82f6;
+  filter: drop-shadow(12px 12px 32px rgba(17, 17, 17, 0.11));
+  border-radius: 16px;
+}

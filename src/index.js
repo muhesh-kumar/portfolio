@@ -6,6 +6,7 @@ import './index.css';
 
 import App from './App';
 import About from './components/About';
+import Projects from './components/Projects';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="about" element={<About />} />
+        <Route path="projects" element={<Projects />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

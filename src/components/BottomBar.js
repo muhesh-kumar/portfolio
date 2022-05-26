@@ -65,6 +65,27 @@ const BottomBar = () => {
             </NavLink>
           );
         })}
+        <div className="icon-separator"></div>
+        <div>
+          <a href="#">
+            <FontAwesomeIcon
+              icon={faSun}
+              size="2x"
+              color="#4B5563"
+              className="bottom-bar__icon-container"
+            />
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <FontAwesomeIcon
+              icon={faMoon}
+              size="2x"
+              color="#4B5563"
+              className="bottom-bar__icon-container"
+            />
+          </a>
+        </div>
       </div>
     </div>
   );

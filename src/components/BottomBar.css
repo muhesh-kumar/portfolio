@@ -42,3 +42,9 @@
   /* background-color: #188aec; */
   /* color: white; */
 }
+
+.icon-separator {
+  border-left: 1px solid #4b5563;
+  height: 3rem;
+  margin-inline: 0.8rem;
+}
