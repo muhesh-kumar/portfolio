@@ -6,7 +6,8 @@
   margin: 0 auto;
   background-color: white;
 
-  border-radius: 1.5rem;
+  /* border-radius: 1.5rem; */
+
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 5rem;
@@ -20,8 +21,8 @@
 }
 
 .home__content {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
 
   display: flex;
   flex-direction: column;

@@ -22,7 +22,9 @@ const Home = () => {
           <Button buttonText="Say Hello" />
         </div>
       </div>
+      {/* <div className="bottom__content"> */}
       <BottomBar />
+      {/* </div> */}
     </div>
   );
 };
