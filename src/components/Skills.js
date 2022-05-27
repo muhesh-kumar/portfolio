@@ -14,7 +14,7 @@ const skills = [
       },
       {
         skillName: 'C++',
-        skillImageName: 'c.png',
+        skillImageName: 'c++.png',
       },
       {
         skillName: 'Python',
@@ -104,25 +104,27 @@ const Skills = () => {
             <div>
               <p>Here are some of my skills</p>
             </div>
-            {skills.map((skill) => {
-              return (
-                <div className="skills-wrapper">
-                  <h2>{skill.skillType}</h2>
-                  <div className="skills__container">
-                    {skill.skills.map((skillDetail) => {
-                      return (
-                        <Skill
-                          skillImageUrl={
-                            pathOfImages + skillDetail.skillImageName
-                          }
-                          skillName={skillDetail.skillName}
-                        />
-                      );
-                    })}
+            <div className="skills">
+              {skills.map((skill) => {
+                return (
+                  <div className="skills-wrapper">
+                    <h2>{skill.skillType}</h2>
+                    <div className="skills__container">
+                      {skill.skills.map((skillDetail) => {
+                        return (
+                          <Skill
+                            skillImageUrl={
+                              pathOfImages + skillDetail.skillImageName
+                            }
+                            skillName={skillDetail.skillName}
+                          />
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
 
             {/* Template */}
             {/* <div>

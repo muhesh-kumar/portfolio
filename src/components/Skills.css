@@ -1,7 +1,15 @@
 .skills-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
   justify-content: center;
   align-items: center;
 }
