@@ -21,11 +21,7 @@ const Project = ({
         </div>
       </div>
       <div className="project-container__image" style={{ order: imageOrder }}>
-        <img
-          // src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/Galleries/20220526115533_Maserati%20MC20%20Cielo%201.jpg&w=736&h=488&q=75&c=1"
-          src={require('../assets/github-repo-lister.png')}
-          alt=""
-        />
+        <img src="assets/github-repo-lister.png" alt="Project Demo" />
       </div>
     </div>
   );

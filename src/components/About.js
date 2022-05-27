@@ -12,7 +12,7 @@ const About = () => {
         <div className="home__content">
           <div className="home__content__text">
             <div>
-              <h1>About Me 👨</h1>
+              <h1>About Me 👨‍🦰</h1>
               <p>A brief intro to who i am and how i do what i do:</p>
             </div>
             <div>
