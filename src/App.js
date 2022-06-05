@@ -1,16 +1,35 @@
+import { motion } from 'framer-motion';
+
 import Header from './components/Header';
 import Home from './components/Home';
 import BottomBar from './components/BottomBar';
 
 import './App.css';
 
+const animations = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
 const App = () => {
   return (
-    <div className="App">
+    <motion.div
+      className="App"
+      // initial={{
+      //   width: 0,
+      // }}
+      // animate={{ width: '100%' }}
+      // exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
+      variants={animations}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <Header />
       <Home />
       <BottomBar />
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,12 +1,25 @@
+import { motion } from 'framer-motion';
 import './About.css';
 
 import Header from './Header';
 import BottomBar from './BottomBar';
 import Button from './Button';
 
+const animations = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
 const About = () => {
   return (
-    <div className="App">
+    <motion.div
+      variants={animations}
+      className="App"
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <Header />
       <div className="home__container">
         <div className="home__content">
@@ -48,7 +61,7 @@ const About = () => {
         <div className="blur-ellipse be-2"></div>
       </div>
       <BottomBar />
-    </div>
+    </motion.div>
   );
 };
 

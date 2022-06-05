@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import Header from './Header';
 import BottomBar from './BottomBar';
 import Skill from './Skill';
@@ -87,13 +89,24 @@ const skills = [
   },
 ];
 
+const animations = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
 // How to display images inside public directory?
 // https://stackoverflow.com/questions/47196800/reactjs-and-images-in-public-folder
 const pathOfImages = 'assets/';
 
 const Skills = () => {
   return (
-    <div>
+    <motion.div
+      variants={animations}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <Header />
       <div className="home__container">
         <div className="home__content">
@@ -148,7 +161,7 @@ const Skills = () => {
         <div className="blur-ellipse be-2"></div>
       </div>
       <BottomBar />
-    </div>
+    </motion.div>
   );
 };
 

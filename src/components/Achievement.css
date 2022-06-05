@@ -1,0 +1,22 @@
+.achievement-container {
+  display: flex;
+  /* background-color: yellow; */
+  gap: 2rem;
+}
+
+.left-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 2rem;
+}

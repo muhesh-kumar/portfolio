@@ -1,15 +1,28 @@
+import { motion } from 'framer-motion';
 import Header from './Header';
 import BottomBar from './BottomBar';
 import Project from './Project';
 
 import './Projects.css';
 
+const animations = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
 const projText =
   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptates quidem qui voluptatum repudiandae sit velit facere quod repellat, quos impedit, corporis sint blanditiis aut ex assumenda voluptatibus architecto iure?';
 
 const Projects = () => {
   return (
-    <div className="projects">
+    <motion.div
+      className="projects"
+      variants={animations}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <Header />
       <div className="home__container">
         <div className="home__content">
@@ -42,7 +55,7 @@ const Projects = () => {
         <div className="blur-ellipse be-2"></div>
       </div>
       <BottomBar />
-    </div>
+    </motion.div>
   );
 };
 
