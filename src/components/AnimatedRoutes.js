@@ -2,11 +2,11 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import App from '../App';
-import About from './About';
-import Projects from './Projects';
-import Skills from './Skills';
-import Journey from './Journey';
-import Achievements from './Achievements';
+import About from './About/About';
+import Projects from './Projects/Projects';
+import Skills from './Skills/Skills';
+import Journey from './Journey/Journey';
+import Achievements from './Achievements/Achievements';
 
 const AnimatedRoutes = () => {
   const location = useLocation();

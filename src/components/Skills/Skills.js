@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
-import Header from './Header';
-import BottomBar from './BottomBar';
-import Skill from './Skill';
+import Header from '../Header/Header';
+import BottomBar from '../BottomBar/BottomBar';
+import Skill from '../Skill/Skill';
 
-import './Skills.css';
+import './Skills.scss';
 
 const skills = [
   {

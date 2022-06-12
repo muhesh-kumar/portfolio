@@ -1,5 +1,5 @@
-import Button from './Button';
-import './Achievement.css';
+import Button from '../Button/Button';
+import './Achievement.scss';
 
 const Achievement = ({ data }) => {
   return (

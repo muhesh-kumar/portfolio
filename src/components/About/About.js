@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import './About.css';
+import './About.scss';
 
-import Header from './Header';
-import BottomBar from './BottomBar';
-import Button from './Button';
+import Header from '../Header/Header';
+import BottomBar from '../BottomBar/BottomBar';
+import Button from '../Button/Button';
 
 const animations = {
   initial: { opacity: 0 },

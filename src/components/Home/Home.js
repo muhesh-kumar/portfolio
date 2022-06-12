@@ -1,5 +1,6 @@
-import './Home.css';
-import Button from './Button';
+import Button from '../Button/Button';
+
+import './Home.scss';
 
 const Home = () => {
   return (

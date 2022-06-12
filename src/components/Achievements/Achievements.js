@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 
-import Header from './Header';
-import BottomBar from './BottomBar';
-import Achievement from './Achievement';
+import Header from '../Header/Header';
+import BottomBar from '../BottomBar/BottomBar';
+import Achievement from '../Achievement/Achievement';
 
-import './Achievements.css';
+import './Achievements.scss';
 
-import achievementData from '../achievementsData';
+import achievementData from '../../data/achievementsData';
 
 const Achievements = () => {
   return (

@@ -9,13 +9,13 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSchool, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
-import Header from './Header';
-import BottomBar from './BottomBar';
-import Button from './Button';
+import Header from '../Header/Header';
+import BottomBar from '../BottomBar/BottomBar';
+import Button from '../Button/Button';
 
-import './Journey.css';
+import './Journey.scss';
 
-import timelineElements from '../timelineElements';
+import timelineElements from '../../data/timelineElements';
 
 const animations = {
   initial: { opacity: 0 },

@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
-import './BottomBar.css';
+import './BottomBar.scss';
 
 const navItems = [
   {

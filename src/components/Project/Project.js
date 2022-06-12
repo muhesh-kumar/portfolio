@@ -1,5 +1,5 @@
-import Button from './Button';
-import './Project.css';
+import Button from '../Button/Button';
+import './Project.scss';
 
 const Project = ({
   projectName,

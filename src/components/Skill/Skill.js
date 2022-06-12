@@ -1,4 +1,4 @@
-import './Skill.css';
+import './Skill.scss';
 
 const Skill = ({ skillImageUrl, skillName }) => {
   console.log(skillImageUrl);
