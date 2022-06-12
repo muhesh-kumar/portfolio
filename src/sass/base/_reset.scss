@@ -64,15 +64,3 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
-/* ----------------STYLING STARTS HERE------------------ */
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
-
-body {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
-  color: #4b5563;
-}

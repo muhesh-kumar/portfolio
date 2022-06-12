@@ -1,0 +1,9 @@
+@import './base/reset'; // css resets goes here
+@import './base/typography';
+
+@import './utilities/variables';
+@import './utilities/mixins'; // all reusable chunks of css goes here
+
+@import './general'; // general global styles
+
+// @import './components/tmp';

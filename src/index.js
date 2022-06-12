@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import AnimatedRoutes from './components/AnimatedRoutes';
 
-import './index.css';
+import './sass/main.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
