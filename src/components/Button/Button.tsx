@@ -1,11 +1,12 @@
 import './Button.scss';
 
+const redirectLink = 'https://www.linkedin.com/in/muhesh-kumar-52b2391b9/';
+
 const Button = ({
   buttonText
 }: any) => {
   return (
-    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
-    <a href="mailto:muhesh4102002@gmail.com" className="say-hello-btn btn">
+    <a href={`${redirectLink}`} target="blank" className="say-hello-btn btn">
       {buttonText}
     </a>
   );

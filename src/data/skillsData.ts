@@ -82,6 +82,19 @@ const skills = [
       },
     ],
   },
+  {
+    skillType: 'Other',
+    skills: [
+      { 
+        skillName: 'Algorithms',
+        skillImageName: 'algorithms.png'
+      },
+      {
+        skillName: 'Competitive Programming',
+        skillImageName: 'codeforces.svg'
+      }
+    ]
+  }
 ];
 
 export default skills;
