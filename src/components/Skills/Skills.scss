@@ -1,15 +1,23 @@
-.skills-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
 .skills {
   display: flex;
   flex-direction: column;
   gap: 5rem;
   justify-content: center;
   align-items: center;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
 }

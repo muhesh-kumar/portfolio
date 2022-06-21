@@ -12,6 +12,7 @@ import { faSchool, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import Header from '../Header/Header';
 import BottomBar from '../BottomBar/BottomBar';
 import Button from '../Button/Button';
+import BackgroundBlurEllipse from '../BackgroundBlurEllipse/BackgroundBlurEllipse';
 
 import './Journey.scss';
 
@@ -32,9 +33,9 @@ const Journey = () => {
       exit="exit"
     >
       <Header />
-      <div className="home__container">
+      <div className="home">
         <div className="home__content">
-          <div className="home__content__text">
+          <div className="home__text">
             <div>
               <h1>My Journey💡</h1>
             </div>
@@ -93,9 +94,7 @@ const Journey = () => {
           </div>
         </div>
 
-        {/* Background blur boxes */}
-        <div className="blur-ellipse be-1"></div>
-        <div className="blur-ellipse be-2"></div>
+        <BackgroundBlurEllipse />
       </div>
       <BottomBar />
     </motion.div>

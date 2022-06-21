@@ -3,91 +3,11 @@ import { motion } from 'framer-motion';
 import Header from '../Header/Header';
 import BottomBar from '../BottomBar/BottomBar';
 import Skill from '../Skill/Skill';
+import BackgroundBlurEllipse from '../BackgroundBlurEllipse/BackgroundBlurEllipse';
 
 import './Skills.scss';
 
-const skills = [
-  {
-    skillType: 'Programming Languages',
-    skills: [
-      {
-        skillName: 'C',
-        skillImageName: 'c.png',
-      },
-      {
-        skillName: 'C++',
-        skillImageName: 'c++.png',
-      },
-      {
-        skillName: 'Python',
-        skillImageName: 'python.png',
-      },
-      {
-        skillName: 'Java',
-        skillImageName: 'java.png',
-      },
-    ],
-  },
-  {
-    skillType: 'Front End Technologies',
-    skills: [
-      {
-        skillName: 'HTML',
-        skillImageName: 'html.png',
-      },
-      {
-        skillName: 'CSS',
-        skillImageName: 'css.png',
-      },
-      {
-        skillName: 'JavaScript',
-        skillImageName: 'javascript.png',
-      },
-      {
-        skillName: 'SASS',
-        skillImageName: 'sass.png',
-      },
-      {
-        skillName: 'ReactJS',
-        skillImageName: 'react.png',
-      },
-    ],
-  },
-  {
-    skillType: 'Back End Technologies',
-    skills: [
-      {
-        skillName: 'NodeJS',
-        skillImageName: 'nodejs.png',
-      },
-      {
-        skillName: 'ExperssJS',
-        skillImageName: 'express.png',
-      },
-      {
-        skillName: 'MongoDB',
-        skillImageName: 'mongodb.png',
-      },
-    ],
-  },
-  {
-    skillType: 'Tools',
-    skills: [
-      {
-        skillName: 'Git',
-        skillImageName: 'git.png',
-      },
-      {
-        skillName: 'Linux',
-        skillImageName: 'linux.png',
-      },
-      {
-        skillName: 'VIM',
-        skillImageName: 'vim.png',
-      },
-    ],
-  },
-];
+import skillsData from '../../data/skillsData';
 
 const animations = {
   initial: { opacity: 0 },
@@ -108,9 +28,9 @@ const Skills = () => {
       exit="exit"
     >
       <Header />
-      <div className="home__container">
+      <div className="home">
         <div className="home__content">
-          <div className="home__content__text">
+          <div className="home__text">
             <div>
               <h1>Skills</h1>
             </div>
@@ -118,7 +38,7 @@ const Skills = () => {
               <p>Here are some of my skills</p>
             </div>
             <div className="skills">
-              {skills.map((skill) => {
+              {skillsData.map((skill) => {
                 return (
                   <div className="skills-wrapper">
                     <h2>{skill.skillType}</h2>
@@ -138,27 +58,9 @@ const Skills = () => {
                 );
               })}
             </div>
-
-            {/* Template */}
-            {/* <div>
-              <h2>Programming Languages</h2>
-              <div className="skills__container">
-                <Skill
-                  skillImageUrl={require('../assets/c.png')}
-                  skillName="C"
-                />
-                <Skill
-                  skillImageUrl={require('../assets/python.png')}
-                  skillName="python"
-                />
-              </div>
-            </div> */}
           </div>
         </div>
-
-        {/* Background blur boxes */}
-        <div className="blur-ellipse be-1"></div>
-        <div className="blur-ellipse be-2"></div>
+        <BackgroundBlurEllipse />
       </div>
       <BottomBar />
     </motion.div>

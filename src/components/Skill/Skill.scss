@@ -4,17 +4,9 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-}
 
-.skill__container img {
-  width: 10rem;
-  height: 10rem;
-}
-
-.skills__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  img {
+    width: 10rem;
+    height: 10rem;
+  }
 }

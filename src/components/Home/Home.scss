@@ -1,4 +1,4 @@
-.home__container {
+.home {
   margin: 10rem;
   height: 100%;
 
@@ -7,56 +7,29 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+
+  &__content {
+    padding-left: 7rem;
+    padding-right: 7rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    & h1 {
+      font-size: 4rem;
+      color: #4b5563;
+    }
+
+    & p {
+      font-size: 1.3rem;
+      color: #4b5563;
+    }
+  }
 }
 
-.home__content {
-  padding-left: 7rem;
-  padding-right: 7rem;
-
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-}
-
-.home__content h1 {
-  font-size: 4rem;
-  color: #4b5563;
-}
-
-.home__content p {
-  font-size: 1.3rem;
-  color: #4b5563;
-}
-
-.home__content__text {
+.home__text {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-}
-
-/* Background Blur Ellipses */
-.blur-ellipse {
-  background-color: #188aec;
-  width: 10rem;
-  height: 10rem;
-  opacity: 0.4;
-  border-radius: 100%;
-  position: fixed;
-
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(70px);
-
-  z-index: 101;
-}
-
-.be-1 {
-  top: 50vh;
-}
-
-.be-2 {
-  top: 15vh;
-  right: 20rem;
 }

@@ -5,8 +5,8 @@ const Achievement = ({ data }) => {
   return (
     <div className="achievement-container">
       <div className="left-col">
-        <img src="assets/codeforces.png" alt="" />
         {/* Achievement image */}
+        <img src="assets/codeforces.png" alt="" />
       </div>
       <div className="right-col">
         <h2>{data.title}</h2>

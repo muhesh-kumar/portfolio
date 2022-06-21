@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import './About.scss';
 
 import Header from '../Header/Header';
 import BottomBar from '../BottomBar/BottomBar';
 import Button from '../Button/Button';
+import BackgroundBlurEllipse from '../BackgroundBlurEllipse/BackgroundBlurEllipse';
 
 const animations = {
   initial: { opacity: 0 },
@@ -21,9 +21,10 @@ const About = () => {
       exit="exit"
     >
       <Header />
-      <div className="home__container">
+
+      <div className="home">
         <div className="home__content">
-          <div className="home__content__text">
+          <div className="home__text">
             <div>
               <h1>About Me 👨‍🦰</h1>
               <p>A brief intro to who i am and how i do what i do:</p>
@@ -51,14 +52,12 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="home__content__btn">
+          <div className="home__btn">
             <Button buttonText="Say Hello" />
           </div>
         </div>
 
-        {/* Background blur boxes */}
-        <div className="blur-ellipse be-1"></div>
-        <div className="blur-ellipse be-2"></div>
+        <BackgroundBlurEllipse />
       </div>
       <BottomBar />
     </motion.div>

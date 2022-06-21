@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Header from '../Header/Header';
 import BottomBar from '../BottomBar/BottomBar';
 import Achievement from '../Achievement/Achievement';
+import BackgroundBlurEllipse from '../BackgroundBlurEllipse/BackgroundBlurEllipse';
 
 import './Achievements.scss';
 
@@ -18,9 +19,9 @@ const Achievements = () => {
       exit={{ opacity: 0 }}
     >
       <Header />
-      <div className="home__container">
+      <div className="home">
         <div className="home__content">
-          <div className="home__content__text">
+          <div className="home__text">
             <div>
               <h1>Achievements💡</h1>
             </div>
@@ -35,9 +36,7 @@ const Achievements = () => {
           </div>
         </div>
 
-        {/* Background blur boxes */}
-        <div className="blur-ellipse be-1"></div>
-        <div className="blur-ellipse be-2"></div>
+        <BackgroundBlurEllipse />
       </div>
       <BottomBar />
     </motion.div>

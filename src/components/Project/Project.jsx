@@ -1,4 +1,5 @@
 import Button from '../Button/Button';
+
 import './Project.scss';
 
 const Project = ({
