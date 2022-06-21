@@ -1,4 +1,3 @@
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../Button/Button' was resolved to '/home/m... Remove this comment to see the full error message
 import Button from '../Button/Button';
 
 import './Project.scss';
@@ -7,24 +6,28 @@ const Project = ({
   projectName,
   projectDescription,
   projectImageURL,
+  projectRepoURL,
+  projectLiveURL,
   textOrder,
   imageOrder
 }: any) => {
   return (
-    <div className="project-container">
-      <div className="project-container__text" style={{ order: textOrder }}>
+    <div className="project">
+      <div className="project__text" style={{ order: textOrder }}>
         <div>
-          <h2 className="project-name">{projectName}</h2>
-          <p className="project-description">{projectDescription}</p>
+          <h2 className="project__name">{projectName}</h2>
+          <p className="project__description">{projectDescription}</p>
         </div>
         <div>
           <div>
-            <Button buttonText="View Project" />
+            <Button buttonText="View Project" buttonRedirectLink={projectRepoURL} />
           </div>
         </div>
       </div>
-      <div className="project-container__image" style={{ order: imageOrder }}>
-        <img src={`${projectImageURL}`} alt="Project Demo" />
+      <div className="project__image" style={{ order: imageOrder }}>
+        <a href={projectLiveURL}>
+          <img src={`${projectImageURL}`} alt="Project Demo" />
+        </a>
       </div>
     </div>
   );

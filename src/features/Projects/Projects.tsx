@@ -7,14 +7,14 @@ import BackgroundBlurEllipse from '../../components/BackgroundBlurEllipse/Backgr
 
 import './Projects.scss';
 
+import projects from '../../data/projectsData';
+
 const animations = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },
 };
 
-const projText =
-  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptates quidem qui voluptatum repudiandae sit velit facere quod repellat, quos impedit, corporis sint blanditiis aut ex assumenda voluptatibus architecto iure?';
 
 const Projects = () => {
   return (
@@ -37,20 +37,15 @@ const Projects = () => {
               <p>Some things I've been working on in the past few months:</p>
             </div>
             <div className="projects-container">
-              <Project
-                projectName="GitHub Repo Lister"
-                projectDescription={projText}
-                projectImageURL='assets/images/github-repo-lister.png'
-                textOrder={1}
-                imageOrder={2}
-              />
-              <Project
-                projectName="LeetCode AC Count"
-                projectDescription={projText}
-                projectImageURL='assets/images/leetcode-ac-count.jpg'
-                textOrder={2}
-                imageOrder={1}
-              />
+              {projects.map((project, idx) => <Project
+                projectName={project.projectName}
+                projectDescription={project.projectDescription}
+                projectImageURL={project.projectImageURL}
+                projectRepoURL={project.projectRepoURL}
+                projectLiveURL={project.projectLiveURL}
+                textOrder={idx % 2 === 1 ? 2 : 1}
+                imageOrder={idx % 2 === 0 ? 2 : 1}
+              />)}
             </div>
           </div>
         </div>

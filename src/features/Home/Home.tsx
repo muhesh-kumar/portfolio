@@ -1,4 +1,3 @@
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../Button/Button' was resolved to '/home/m... Remove this comment to see the full error message
 import Button from '../../components/Button/Button';
 import BackgroundBlurEllipse from '../../components/BackgroundBlurEllipse/BackgroundBlurEllipse';
 
@@ -19,7 +18,7 @@ const Home = () => {
           </div>
         </div>
         <div className="home__btn">
-          <Button buttonText="Say Hello" />
+          <Button buttonText="Say Hello" buttonRedirectLink='https://www.linkedin.com/in/muhesh-kumar-52b2391b9/' />
         </div>
       </div>
       <BackgroundBlurEllipse />
