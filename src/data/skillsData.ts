@@ -18,22 +18,25 @@ const skills = [
         skillName: 'Java',
         skillImageName: 'java.png',
       },
+      {
+        skillName: 'JavaScript',
+        skillImageName: 'javascript.png',
+      },
+      {
+        skillName: 'TypeScript',
+        skillImageName: 'typescript-2.png',
+      },
     ],
   },
   {
     skillType: 'Front End Technologies',
     skills: [
-      {
-        skillName: 'HTML',
+      { skillName: 'HTML',
         skillImageName: 'html.png',
       },
       {
         skillName: 'CSS',
         skillImageName: 'css.png',
-      },
-      {
-        skillName: 'JavaScript',
-        skillImageName: 'javascript.png',
       },
       {
         skillName: 'SASS',

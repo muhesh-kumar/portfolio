@@ -1,7 +1,7 @@
 import {
   VerticalTimeline,
   VerticalTimelineElement,
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'reac... Remove this comment to see the full error message
+
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
@@ -70,38 +70,38 @@ const Journey = () => {
                     element.buttonText !== null &&
                     element.buttonText !== '';
                   // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
-                  return (<VerticalTimelineElement key={(element as any).key} date={element.date} dateClassName="date" className="vertical-timeline-element" iconStyle={schoolIconStyle} icon={<FontAwesomeIcon icon={faSchool}/>}>
+                  return (<VerticalTimelineElement key={(element as any).key} date={element.date} dateClassName="date" className="vertical-timeline-element" iconStyle={schoolIconStyle} icon={<FontAwesomeIcon icon={faSchool} />}>
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+                    <div className="vertical-timeline-element-container">
                       {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                      <div className="vertical-timeline-element-container">
+                      <div>
                         {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                        <div>
-                          {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                          <h2 className="vertical-timeline-element-title">
-                            {element.title}
-                          </h2>
-                          {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                          <h3 className="vertical-timeline-element-subtitle">
-                            {element.location}
-                          </h3>
-                          {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                          <p id="description">{element.description}</p>
-                        </div>
+                        <h2 className="vertical-timeline-element-title">
+                          {element.title}
+                        </h2>
                         {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                        <div>
-                          {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                          {showButton && (<Button buttonText={element.buttonText}/>
-    // <a
-    //   href="/"
-    //   // className={`button ${
-    //   //   isWorkIcon ? 'workButton' : 'schoolButton'
-    //   // }`}
-    // >
-    //   {element.buttonText}
-    // </a>
-    )}
-                        </div>
+                        <h3 className="vertical-timeline-element-subtitle">
+                          {element.location}
+                        </h3>
+                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+                        <p id="description">{element.description}</p>
                       </div>
-                    </VerticalTimelineElement>);
+                      {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+                      <div>
+                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+                        {showButton && (<Button buttonText={element.buttonText} />
+                          // <a
+                          //   href="/"
+                          //   // className={`button ${
+                          //   //   isWorkIcon ? 'workButton' : 'schoolButton'
+                          //   // }`}
+                          // >
+                          //   {element.buttonText}
+                          // </a>
+                        )}
+                      </div>
+                    </div>
+                  </VerticalTimelineElement>);
                 })}
               </VerticalTimeline>
             </div>
