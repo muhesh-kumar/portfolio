@@ -8,7 +8,7 @@ const skills = [
       },
       {
         skillName: 'C++',
-        skillImageName: 'c++.png',
+        skillImageName: 'cpp.png',
       },
       {
         skillName: 'Python',
@@ -31,9 +31,7 @@ const skills = [
   {
     skillType: 'Front End Technologies',
     skills: [
-      { skillName: 'HTML',
-        skillImageName: 'html.png',
-      },
+      { skillName: 'HTML', skillImageName: 'html.png' },
       {
         skillName: 'CSS',
         skillImageName: 'css.png',
@@ -85,16 +83,16 @@ const skills = [
   {
     skillType: 'Other',
     skills: [
-      { 
+      {
         skillName: 'Algorithms',
-        skillImageName: 'algorithms.png'
+        skillImageName: 'algorithms.png',
       },
       {
         skillName: 'Competitive Programming',
-        skillImageName: 'codeforces.svg'
-      }
-    ]
-  }
+        skillImageName: 'codeforces.svg',
+      },
+    ],
+  },
 ];
 
 export default skills;
