@@ -5,7 +5,9 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"]
     },
-    "importsNotUsedAsValues": "error"
+    "importsNotUsedAsValues": "error",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
   "extends": "astro/tsconfigs/strict"
 }
