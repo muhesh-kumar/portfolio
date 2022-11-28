@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  color: #4b5563;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.highlighted-text {
+  font-weight: bold;
+  font-size: 2rem;
+}
