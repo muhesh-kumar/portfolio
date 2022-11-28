@@ -1,6 +1,5 @@
 ---
 import Btn from '@components/Btn.astro';
-import BackgroundBlurEllipse from '@components/BackgroundBlurEllipse.astro';
 
 import Layout from '@layouts/Layout.astro';
 
@@ -8,23 +7,20 @@ import '../base.css';
 ---
 
 <Layout>
-  <div class="flex flex-col gap-7">
-    <div class="flex flex-col gap-20">
-      <div class="flex flex-col gap-7">
-        <div class="flex flex-col gap-7 font-bold text-6xl">
-          <h1>Hello!👋🏻</h1>
-          <h1>This is Muhesh</h1>
-          <h1>I'm a Computer Science Student</h1>
-        </div>
-        <p class="text-xl">I like to solve real world problems with software</p>
+  <div class="flex flex-col gap-20">
+    <div class="flex flex-col gap-7">
+      <div class="flex flex-col gap-7 font-bold text-6xl">
+        <h1>Hello!👋🏻</h1>
+        <h1>This is Muhesh</h1>
+        <h1>I'm a Computer Science Student</h1>
       </div>
-      <div>
-        <Btn
-          btnText="Say Hello"
-          btnRedirectLink="https://www.linkedin.com/in/muhesh-kumar-52b2391b9/"
-        />
-      </div>
+      <p class="text-xl">I like to solve real world problems with software</p>
     </div>
-    <BackgroundBlurEllipse />
+    <div>
+      <Btn
+        btnText="Say Hello"
+        btnRedirectLink="https://www.linkedin.com/in/muhesh-kumar-52b2391b9/"
+      />
+    </div>
   </div>
 </Layout>
