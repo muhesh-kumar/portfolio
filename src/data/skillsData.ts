@@ -8,7 +8,7 @@ const skills = [
       },
       {
         skillName: 'C++',
-        skillImageName: 'c++.png',
+        skillImageName: 'cpp.png',
       },
       {
         skillName: 'Python',
@@ -31,9 +31,7 @@ const skills = [
   {
     skillType: 'Front End Technologies',
     skills: [
-      { skillName: 'HTML',
-        skillImageName: 'html.png',
-      },
+      { skillName: 'HTML', skillImageName: 'html.png' },
       {
         skillName: 'CSS',
         skillImageName: 'css.png',
@@ -79,6 +77,19 @@ const skills = [
       {
         skillName: 'VIM',
         skillImageName: 'vim.png',
+      },
+    ],
+  },
+  {
+    skillType: 'Other',
+    skills: [
+      {
+        skillName: 'Algorithms',
+        skillImageName: 'algorithms.png',
+      },
+      {
+        skillName: 'Competitive Programming',
+        skillImageName: 'codeforces.svg',
       },
     ],
   },
