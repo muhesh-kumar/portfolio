@@ -1,0 +1,59 @@
+---
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from 'framer-motion';
+import { clsx } from 'clsx';
+
+import navItems from './navItems';
+import { BLUE_COLOR, FONT_COLOR } from '@constants/colors';
+
+const activePathName = new URL(Astro.request.url).pathname;
+
+const isActive = (pathName: string) => pathName == activePathName;
+---
+
+<div class="flex justify-center items-center">
+  <div
+    class="fixed bottom-[1.5rem] z-1 flex justify-center items-center gap-[0.7rem] bg-white border-[1px] border-bottomBarIconBgColor rounded-2xl p-[0.5rem] px-[1rem] shadow-bottomBarShadow"
+  >
+    {
+      navItems.map((navItem) => {
+        return (
+          <a href={navItem.route}>
+            <motion.div
+              className={clsx(
+                'bg-bottomBarIconBgColor rounded-2xl p-[1rem]',
+                isActive(navItem.route) && 'fa-bounce'
+              )}
+            >
+              <FontAwesomeIcon
+                icon={navItem.icon}
+                size={isActive(navItem.route) ? '3x' : '2x'}
+                color={isActive(navItem.route) ? BLUE_COLOR : FONT_COLOR}
+                client:load
+              />
+            </motion.div>
+          </a>
+        );
+      })
+    }
+    <div class="border-l-[1px] border-fontColor h-[3rem]"></div>
+    <!-- TODO: put these in a ts file and then iterate through them -->
+    <button class="bg-bottomBarIconBgColor rounded-2xl p-[1rem]">
+      <FontAwesomeIcon
+        icon={faSun}
+        size="2x"
+        color={FONT_COLOR}
+        className="bottom-bar__icon-container"
+      />
+    </button>
+    <button class="bg-bottomBarIconBgColor rounded-2xl p-[1rem]">
+      <FontAwesomeIcon
+        icon={faMoon}
+        size="2x"
+        color={FONT_COLOR}
+        className="bottom-bar__icon-container"
+      />
+    </button>
+  </div>
+</div>

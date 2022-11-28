@@ -10,6 +10,10 @@ module.exports = {
       colors: {
         blue: '#188aec',
         fontColor: '#4b5563',
+        bottomBarIconBgColor: '#f3f4f6',
+      },
+      boxShadow: {
+        bottomBarShadow: '-24px 24px 64px rgba(17, 17, 17, 0.11)',
       },
     },
   },

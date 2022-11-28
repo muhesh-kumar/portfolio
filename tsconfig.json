@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@constants/*": ["src/constants/*"]
     },
     "importsNotUsedAsValues": "error",
     "jsx": "react-jsx",
