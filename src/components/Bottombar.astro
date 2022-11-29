@@ -11,10 +11,6 @@ import { BLUE_COLOR, FONT_COLOR } from '@constants/index';
 const activePathName = new URL(Astro.request.url).pathname;
 
 const isActive = (pathName: string) => pathName == activePathName;
-
-const handleClick = (e: any) => {
-  console.log('clicked');
-};
 ---
 
 <div class="flex justify-center items-center">
