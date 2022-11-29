@@ -6,7 +6,8 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@constants/*": ["src/constants/*"],
-      "@data/*": ["src/data/*"]
+      "@data/*": ["src/data/*"],
+      "@elements/*": ["src/components/elements/*"]
     },
     "importsNotUsedAsValues": "error",
     "jsx": "react-jsx",
