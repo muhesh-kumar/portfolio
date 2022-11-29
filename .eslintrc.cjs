@@ -27,7 +27,7 @@ module.exports = {
         'astro/no-unused-define-vars-in-style': 'error',
 
         // override/add rules settings here, such as:
-        // "astro/no-set-html-directive": "error"
+        'astro/no-set-html-directive': 'error',
       },
     },
     {

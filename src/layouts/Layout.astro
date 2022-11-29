@@ -1,5 +1,5 @@
 ---
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import Header from '@components/Header.astro';
 import Bottombar from '@components/Bottombar.astro';
@@ -20,19 +20,21 @@ const animations = {
     <meta name="generator" content={Astro.generator} />
     <title>Muhesh Kumar</title>
   </head>
-  <body>
-    <Header />
-    <motion.main
-      className="font-spaceGrotesk text-fontColor px-[15rem] py-[5rem] flex flex-col gap-20"
-      variants={animations}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      client:load
-    >
-      <slot />
-    </motion.main>
-    <Bottombar />
-    <BackgroundBlurEllipse />
+  <body class="dark:bg-darkBackground">
+    <AnimatePresence exitBeforeEnter client:load>
+      <Header />
+      <motion.main
+        className="font-spaceGrotesk text-fontColor dark:text-white px-[15rem] py-[5rem] flex flex-col gap-20"
+        variants={animations}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        client:load
+      >
+        <slot />
+      </motion.main>
+      <Bottombar />
+      <BackgroundBlurEllipse />
+    </AnimatePresence>
   </body>
 </html>

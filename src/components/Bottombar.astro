@@ -1,20 +1,25 @@
 ---
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import { clsx } from 'clsx';
 
+import ThemeToggle from '@components/ThemeToggle';
+
 import navItems from './navItems';
-import { BLUE_COLOR, FONT_COLOR } from '@constants/colors';
+import { BLUE_COLOR, FONT_COLOR } from '@constants/index';
 
 const activePathName = new URL(Astro.request.url).pathname;
 
 const isActive = (pathName: string) => pathName == activePathName;
+
+const handleClick = (e: any) => {
+  console.log('clicked');
+};
 ---
 
 <div class="flex justify-center items-center">
   <div
-    class="fixed bottom-[1.5rem] z-1 flex justify-center items-center gap-[0.7rem] bg-white border-[1px] border-bottomBarIconBgColor rounded-3xl p-[0.2rem] px-[1.25rem] shadow-bottomBarShadow transform-preserve-3d"
+    class="fixed bottom-[1.5rem] z-1 flex justify-center items-center gap-[0.7rem] bg-white dark:bg-darkBottomBarBackground border-[1px] border-bottomBarIconBgColor dark:border-slate-700 rounded-3xl p-[0.2rem] px-[1.25rem] shadow-bottomBarShadow dark:shadow-darkBottomBarShadow transform-preserve-3d"
   >
     {
       navItems.map((navItem) => {
@@ -22,14 +27,19 @@ const isActive = (pathName: string) => pathName == activePathName;
           <a href={navItem.route}>
             <motion.div
               className={clsx(
-                'bg-bottomBarIconBgColor rounded-2xl p-[1rem]',
-                isActive(navItem.route) && 'fa-bounce'
+                'bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-[1rem]',
+                isActive(navItem.route) && 'fa-bounce dark:bg-blue'
               )}
             >
               <FontAwesomeIcon
                 icon={navItem.icon}
                 size={isActive(navItem.route) ? '3x' : '2x'}
                 color={isActive(navItem.route) ? BLUE_COLOR : FONT_COLOR}
+                className={clsx(
+                  isActive(navItem.route)
+                    ? 'text-blue dark:text-white'
+                    : 'text-fontColor dark:text-slate-400'
+                )}
                 client:load
               />
             </motion.div>
@@ -38,22 +48,28 @@ const isActive = (pathName: string) => pathName == activePathName;
       })
     }
     <div class="border-l-[1px] border-fontColor h-[3rem]"></div>
-    <!-- TODO: put these in a ts file and then iterate through them -->
-    <button class="bg-bottomBarIconBgColor rounded-2xl p-[1rem]">
-      <FontAwesomeIcon
-        icon={faSun}
-        size="2x"
-        color={FONT_COLOR}
-        className="bottom-bar__icon-container"
-      />
-    </button>
-    <button class="bg-bottomBarIconBgColor rounded-2xl p-[1rem]">
-      <FontAwesomeIcon
-        icon={faMoon}
-        size="2x"
-        color={FONT_COLOR}
-        className="bottom-bar__icon-container"
-      />
-    </button>
+    <ThemeToggle client:load />
   </div>
+
+  <script is:inline>
+    const theme = (() => {
+      if (
+        typeof localStorage !== 'undefined' &&
+        localStorage.getItem('theme')
+      ) {
+        return localStorage.getItem('theme');
+      }
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      return 'light';
+    })();
+
+    if (theme === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+    window.localStorage.setItem('theme', theme);
+  </script>
 </div>
