@@ -16,7 +16,7 @@ module.exports = {
       },
       boxShadow: {
         bottomBarShadow: '-24px 24px 64px rgba(17, 17, 17, 0.11)',
-        darkBottomBarShadow: '32px 32px 64px rgba(243, 244, 246, 0.11)',
+        darkBottomBarShadow: '15px 15px 64px rgba(243, 244, 246, 0.11)',
         // darkBottomBarShadow: '32px 32px 64px rgba(243, 244, 246, 0.08)',
         projectCardShadow:
           '0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2)',
