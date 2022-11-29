@@ -1,4 +1,4 @@
-const skills = [
+export default [
   {
     skillType: 'Programming Languages',
     skills: [
@@ -94,5 +94,3 @@ const skills = [
     ],
   },
 ];
-
-export default skills;

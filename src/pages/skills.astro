@@ -1,0 +1,54 @@
+---
+import { motion } from 'framer-motion';
+
+import Skill from '@components/Skill.astro';
+import Heading from '@components/Heading.astro';
+
+import Layout from '@layouts/Layout.astro';
+
+import skillsData from '@data/skillsData';
+
+import '../base.css';
+
+const animations = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
+const pathOfImages = 'assets/images/';
+---
+
+<Layout>
+  <motion.div client:load>
+    <div class="flex flex-col gap-20">
+      <div class="flex flex-col gap-7 text-xl">
+        <Heading>Skills</Heading>
+        <p>Here are some of my skills</p>
+      </div>
+      <div class="flex flex-col gap-[5rem] items-center justify-center">
+        {
+          skillsData.map((skill) => {
+            return (
+              <div class="flex flex-col gap-[1rem] items-center justify-center">
+                <h2 class="text-lg font-bold">{skill.skillType}</h2>
+                <div class="flex itesm-center justify-center gap-[2rem] flex-wrap">
+                  {skill.skills.map((skillDetail) => {
+                    return (
+                      <Skill
+                        skillImageUrl={
+                          pathOfImages + skillDetail.skillImageName
+                        }
+                        skillName={skillDetail.skillName}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </motion.div>
+</Layout>
