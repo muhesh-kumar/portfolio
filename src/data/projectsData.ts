@@ -2,7 +2,7 @@ const imageDir = 'assets/images';
 
 const getImageURL = (imageName: string) => `${imageDir}/${imageName}`;
 
-const projects = [
+export default [
   {
     projectName: 'LeetCode AC Count',
     projectDescription:
@@ -29,5 +29,3 @@ const projects = [
     projectLiveURL: 'https://hospital-management-system3002.herokuapp.com',
   },
 ];
-
-export default projects;

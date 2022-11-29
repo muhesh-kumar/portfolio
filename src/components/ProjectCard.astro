@@ -1,0 +1,46 @@
+---
+import Btn from '@components/Btn.astro';
+
+export interface Props {
+  projectName: string;
+  projectDescription: string;
+  projectImageURL: string;
+  projectRepoURL: string;
+  projectLiveURL: string;
+  textOrder: number;
+  imageOrder: number;
+}
+
+const {
+  projectName,
+  projectDescription,
+  projectImageURL,
+  projectRepoURL,
+  projectLiveURL,
+  textOrder,
+  imageOrder,
+} = Astro.props;
+---
+
+<div class="flex gap-[5rem]">
+  <div class="flex flex-col gap-10" style={{ order: textOrder }}>
+    <div>
+      <h2 class="font-bold text-[2.25rem]">{projectName}</h2>
+      <p class="font-medium text-[1.2rem]">{projectDescription}</p>
+    </div>
+    <div>
+      <div>
+        <Btn btnText="View Project" btnRedirectLink={projectRepoURL} />
+      </div>
+    </div>
+  </div>
+  <div style={{ order: imageOrder }}>
+    <a href={projectLiveURL}>
+      <img
+        src={`${projectImageURL}`}
+        alt={`${projectName} Demo`}
+        class="border-[0.1rem] border-blue rounded-lg drop-shadow-projectCardDropShadow shadow-projectCardShadow"
+      />
+    </a>
+  </div>
+</div>

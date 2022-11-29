@@ -1,7 +1,15 @@
 ---
+import { motion } from 'framer-motion';
+
 import Header from '@components/Header.astro';
 import Bottombar from '@components/Bottombar.astro';
 import BackgroundBlurEllipse from '@components/BackgroundBlurEllipse.astro';
+
+const animations = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 ---
 
 <html lang="en">
@@ -14,9 +22,16 @@ import BackgroundBlurEllipse from '@components/BackgroundBlurEllipse.astro';
   </head>
   <body>
     <Header />
-    <main class="font-spaceGrotesk text-fontColor px-[15rem] py-[5rem]">
+    <motion.main
+      className="font-spaceGrotesk text-fontColor px-[15rem] py-[5rem] flex flex-col gap-20"
+      variants={animations}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      client:load
+    >
       <slot />
-    </main>
+    </motion.main>
     <Bottombar />
     <BackgroundBlurEllipse />
   </body>
