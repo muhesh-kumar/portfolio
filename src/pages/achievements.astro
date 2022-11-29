@@ -1,0 +1,30 @@
+---
+import { motion } from 'framer-motion';
+
+import Heading from '@elements/Heading.astro';
+import Achievement from '@components/Achievement.astro';
+
+import Layout from '@layouts/Layout.astro';
+
+import achievementsData from '@data/achievementsData';
+
+import '@/base.css';
+---
+
+<Layout>
+  <div class="flex flex-col gap-20">
+    <div class="flex flex-col gap-5">
+      <Heading>Achievements💡</Heading>
+      <p>Some of my achievements over the past few years</p>
+    </div>
+
+    <div class="achievements-container">
+      Coming Soon...
+      <!-- {
+        achievementsData.map((achievement) => {
+          return <Achievement data={achievement} />;
+        })
+      } -->
+    </div>
+  </div>
+</Layout>

@@ -1,12 +1,10 @@
-const achievementsData = [
+export default [
   {
     id: 1,
     title: 'Codeforces',
     description: 'Specialist',
-    button1Text: 'Details',
-    button2Text: 'View Achievement',
+    btn1Text: 'Details',
+    btn2Text: 'View Achievement',
     certificateLink: 'https://codeforces.com/MuheshKumar',
   },
 ];
-
-export default achievementsData;

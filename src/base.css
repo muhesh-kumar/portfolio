@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .blur-ellipse {
+    @apply bg-blue w-[10rem] h-[10rem] opacity-40 rounded-full fixed blur-[70px] top-[50vh];
+  }
+}

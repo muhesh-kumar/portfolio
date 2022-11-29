@@ -1,0 +1,40 @@
+---
+import { motion, AnimatePresence } from 'framer-motion';
+
+import Header from '@components/Header.astro';
+import Bottombar from '@components/Bottombar.astro';
+import BackgroundBlurEllipse from '@elements/BackgroundBlurEllipse.astro';
+
+const animations = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Muhesh Kumar</title>
+  </head>
+  <body class="dark:bg-darkBackground">
+    <AnimatePresence exitBeforeEnter client:load>
+      <Header />
+      <motion.main
+        className="font-spaceGrotesk text-fontColor dark:text-white px-[15rem] py-[5rem] flex flex-col gap-20"
+        variants={animations}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        client:load
+      >
+        <slot />
+      </motion.main>
+      <Bottombar />
+      <BackgroundBlurEllipse />
+    </AnimatePresence>
+  </body>
+</html>
