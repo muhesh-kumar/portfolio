@@ -1,7 +1,6 @@
 <div align="center">
   <img alt="Logo" src="public/assets/images/logo.png" height="75" />
-  <!-- <img alt="Logo" src="https://raw.githubusercontent.com/muhesh-kumar/portfolio/main/public/assets/images/logo.png" width="100" />
-</div> -->
+</div>
 <h1 align="center">
    portfolio-muhesh-kumar.vercel.app
 </h1>
