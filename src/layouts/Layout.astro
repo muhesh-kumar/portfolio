@@ -1,8 +1,8 @@
 ---
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import Header from '@components/Header.astro';
-import Bottombar from '@components/Bottombar.astro';
+import Bottombar from '@components/Bottombar';
 import BackgroundBlurEllipse from '@elements/BackgroundBlurEllipse.astro';
 
 const animations = {
@@ -21,20 +21,40 @@ const animations = {
     <title>Muhesh Kumar</title>
   </head>
   <body class="dark:bg-darkBackground">
-    <AnimatePresence client:load>
-      <Header />
-      <motion.main
-        className="font-spaceGrotesk text-fontColor dark:text-white px-[15rem] py-[5rem] flex flex-col gap-20"
-        variants={animations}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        client:load
-      >
-        <slot />
-      </motion.main>
-      <Bottombar />
-      <BackgroundBlurEllipse />
-    </AnimatePresence>
+    <Header />
+    <motion.main
+      className="font-spaceGrotesk text-fontColor dark:text-white px-[15rem] py-[5rem] flex flex-col gap-20"
+      variants={animations}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      client:load
+    >
+      <slot />
+    </motion.main>
+    <Bottombar client:load />
+    <BackgroundBlurEllipse />
+
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+      window.localStorage.setItem('theme', theme);
+    </script>
   </body>
 </html>
