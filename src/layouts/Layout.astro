@@ -32,7 +32,7 @@ const animations = {
     >
       <slot />
     </motion.main>
-    <Bottombar client:load />
+    <Bottombar client:load activePathName={Astro.url.pathname} />
     <BackgroundBlurEllipse />
 
     <script is:inline>
