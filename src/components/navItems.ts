@@ -5,8 +5,6 @@ import {
   faToolbox,
   faTrophy,
   faUser,
-  faSun,
-  faMoon,
 } from '@fortawesome/free-solid-svg-icons';
 
 export default [
