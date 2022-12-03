@@ -1,16 +1,16 @@
 ---
-import ThemeToggle from '@components/ThemeToggle';
 import BottombarIcon from '@elements/BottombarIcon.astro';
+import ThemeToggle from '@components/ThemeToggle';
 
 import navItems from './navItems';
 ---
 
 <div class="flex justify-center items-center">
   <div
-    class="fixed bottom-[1.5rem] z-1 flex justify-center items-center gap-[0.7rem] bg-white dark:bg-darkBottomBarBackground border-[1px] border-bottomBarIconBgColor dark:border-slate-700 rounded-3xl p-[0.2rem] px-[1.25rem] shadow-bottomBarShadow dark:shadow-darkBottomBarShadow transform-preserve-3d"
+    class="fixed bottom-6 z-1 flex justify-center items-center gap-2.5 bg-white dark:bg-darkBottomBarBackground border-[1px] border-bottomBarIconBgColor dark:border-slate-700 rounded-3xl py-0.5 px-5 shadow-bottomBarShadow dark:shadow-darkBottomBarShadow transform-preserve-3d"
   >
     {navItems.map((navItem) => <BottombarIcon navItem={navItem} />)}
-    <div class="border-l-[1px] border-fontColor h-[3rem]"></div>
+    <div class="border-l border-fontColor h-12"></div>
     <ThemeToggle client:load />
   </div>
 </div>

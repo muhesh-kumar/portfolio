@@ -7,6 +7,7 @@
 
 @layer components {
   .blur-ellipse {
-    @apply bg-blue w-[10rem] h-[10rem] opacity-40 rounded-full fixed blur-[70px] top-[50vh];
+    /* blur-3xl is 64px */
+    @apply bg-blue w-40 h-40 opacity-40 rounded-full fixed blur-[70px] top-[50vh];
   }
 }

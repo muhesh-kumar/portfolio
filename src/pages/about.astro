@@ -1,5 +1,7 @@
 ---
+import Heading from '@elements/Heading.astro';
 import Btn from '@elements/Btn.astro';
+
 import Layout from '@layouts/Layout.astro';
 
 import '@/base.css';
@@ -7,13 +9,13 @@ import '@/base.css';
 
 <Layout>
   <div class="flex flex-col gap-7 text-lg">
-    <div class="flex flex-col gap-5">
-      <h1 class="text-[4rem] font-black">About Me 👨‍🦰</h1>
+    <div class="flex flex-col gap-1">
+      <Heading>About Me 👨‍🦰</Heading>
       <p>A brief intro to who i am and what i do:</p>
     </div>
     <div>
       <p>
-        I am <span class="font-black text-[2rem]">Muhesh</span>
+        I am <span class="font-black text-3xl">Muhesh</span>
       </p>
     </div>
     <div>

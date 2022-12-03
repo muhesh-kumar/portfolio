@@ -7,9 +7,9 @@ const { btnText, btnRedirectLink } = Astro.props;
 ---
 
 <a
-  href={btnRedirectLink ?? ''}
+  href={btnRedirectLink ?? '/'}
   target="blank"
-  class="text-white bg-blue p-[0.8rem] px-[2.3rem] rounded-lg relative z-1 text-center text-[1.5rem] font-medium hover:cursor-pointer after:content-[''] after:border-[0.15rem] after:border-blue after:w-[96%] after:h-full after:rounded-lg after:z-[-1] after:absolute after:top-[-0.54rem] after:left-[10px]"
+  class="text-white bg-blue py-3 px-9 rounded-lg relative z-1 text-center text-2xl font-medium hover:cursor-pointer after:content-[''] after:border-2 after:border-blue after:w-[96%] after:h-full after:rounded-lg after:z-[-1] after:absolute after:-top-2 after:left-2.5"
 >
   {btnText}
 </a>

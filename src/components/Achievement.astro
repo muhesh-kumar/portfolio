@@ -18,15 +18,15 @@ const { data } = Astro.props;
 const { title, description } = data;
 ---
 
-<div class="flex gap-[2rem]">
+<div class="flex gap-8">
   <div class="flex items-center justify-center">
     {/* TODO: Achievement image */}
     <img src={getImageURL('codeforces.png')} alt="Codeforces Logo" />
   </div>
-  <div class="flex flex-col gap-[2rem]">
+  <div class="flex flex-col gap-8">
     <h2>{title}</h2>
     <p>{description}</p>
-    <div class="flex gap-[2rem]">
+    <div class="flex gap-8">
       <Btn btnText="Details" />
       <Btn btnText="View Achievement" />
     </div>

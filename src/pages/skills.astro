@@ -1,6 +1,4 @@
 ---
-import { motion } from 'framer-motion';
-
 import Heading from '@elements/Heading.astro';
 import Skill from '@components/Skill.astro';
 
@@ -19,13 +17,13 @@ import '@/base.css';
       <Heading>Skills</Heading>
       <p>Here are some of my skills</p>
     </div>
-    <div class="flex flex-col gap-[5rem] items-center justify-center">
+    <div class="flex flex-col gap-20 items-center justify-center">
       {
         skillsData.map((skill) => {
           return (
-            <div class="flex flex-col gap-[1rem] items-center justify-center">
+            <div class="flex flex-col gap-4 items-center justify-center">
               <h2 class="text-lg font-bold">{skill.skillType}</h2>
-              <div class="flex itesm-center justify-center gap-[2rem] flex-wrap">
+              <div class="flex items-center justify-center gap-8 flex-wrap">
                 {skill.skills.map((skillDetail) => {
                   return (
                     <Skill

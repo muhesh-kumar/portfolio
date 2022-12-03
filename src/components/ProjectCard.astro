@@ -22,11 +22,11 @@ const {
 } = Astro.props;
 ---
 
-<div class="grid grid-cols-2 gap-[5rem]">
+<div class="grid grid-cols-2 gap-20">
   <div class="colspan-1 flex flex-col gap-10" style={{ order: textOrder }}>
-    <div>
-      <h2 class="font-bold text-[2.25rem]">{projectName}</h2>
-      <p class="font-medium text-[1.2rem]">{projectDescription}</p>
+    <div class="flex flex-col gap-1">
+      <h2 class="font-bold text-4xl">{projectName}</h2>
+      <p class="font-medium text-lg">{projectDescription}</p>
     </div>
     <div>
       <div>

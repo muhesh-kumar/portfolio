@@ -28,7 +28,7 @@ const isActive = (pathName: string) => {
 <a href={navItem.route}>
   <motion.div
     className={clsx(
-      'bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-[1rem]',
+      'bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-4',
       isActive(navItem.route) && 'fa-bounce dark:bg-blue'
     )}
     client:load

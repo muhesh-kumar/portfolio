@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { FONT_COLOR } from '@constants/index';
-
 const ThemeToggle = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
   const [isMounted, setIsMounted] = useState(false);
@@ -24,7 +22,7 @@ const ThemeToggle = () => {
   if (!isMounted) return <></>;
 
   return (
-    <button className="bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-[1rem]" onClick={handleClick}>
+    <button className="bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-4" onClick={handleClick}>
       {theme == "light" ? (
         <FontAwesomeIcon
           icon={faSun}
