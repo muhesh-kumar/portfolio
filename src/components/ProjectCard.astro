@@ -22,8 +22,12 @@ const {
 } = Astro.props;
 ---
 
-<div class="grid grid-cols-2 gap-20">
-  <div class="colspan-1 flex flex-col gap-10" style={{ order: textOrder }}>
+<!-- TODO: make it responsive for tablets too -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
+  <div
+    class="lg:colspan-1 lg:flex flex-col gap-10 hidden"
+    style={{ order: textOrder }}
+  >
     <div class="flex flex-col gap-1">
       <h2 class="font-bold text-4xl">{projectName}</h2>
       <p class="font-medium text-lg">{projectDescription}</p>
@@ -34,7 +38,26 @@ const {
       </div>
     </div>
   </div>
-  <div class="colspan-1" style={{ order: imageOrder }}>
+  <div class="lg:flex colspan-2 lg:colspan-1 hidden" style={{ order: imageOrder }}>
+    <a href={projectLiveURL}>
+      <img
+        src={`${projectImageURL}`}
+        alt={`${projectName} Demo`}
+        class="border-2 border-blue rounded-lg drop-shadow-projectCardDropShadow shadow-projectCardShadow dark:drop-shadow-darkProjectCardDropShadow dark:shadow-darkProjectCardShadow"
+      />
+    </a>
+  </div>
+
+  <!-- For mobile devices -->
+  <div class="flex flex-col gap-10 lg:hidden">
+    <div class="flex flex-col gap-1">
+      <h2 class="font-bold text-2xl">{projectName}</h2>
+      <p class="font-medium text-md">{projectDescription}</p>
+    </div>
+    <Btn btnText="View Project" btnRedirectLink={projectRepoURL} />
+  </div>
+
+  <div class="lg:hidden">
     <a href={projectLiveURL}>
       <img
         src={`${projectImageURL}`}

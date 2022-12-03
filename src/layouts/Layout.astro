@@ -23,7 +23,7 @@ const animations = {
   <body class="dark:bg-darkBackground">
     <Header />
     <motion.main
-      className="font-spaceGrotesk text-fontColor dark:text-white px-60 py-20 flex flex-col gap-20"
+      className="font-spaceGrotesk text-fontColor dark:text-white flex flex-col gap-20 px-14 py-20 md:px-40 md:py-10 lg:px-60 lg:py-20"
       variants={animations}
       initial="initial"
       animate="animate"
@@ -32,7 +32,9 @@ const animations = {
     >
       <slot />
     </motion.main>
-    <Bottombar />
+    <div class="flex justify-center">
+      <Bottombar />
+    </div>
     <BackgroundBlurEllipse />
 
     <script is:inline>

@@ -28,8 +28,8 @@ const isActive = (pathName: string) => {
 <a href={navItem.route}>
   <motion.div
     className={clsx(
-      'bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-4',
-      isActive(navItem.route) && 'fa-bounce dark:bg-blue'
+      'bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-3 md:p-4',
+      isActive(navItem.route) && 'fa-bounce dark:bg-blue px-3 py-4'
     )}
     client:load
   >
@@ -38,6 +38,20 @@ const isActive = (pathName: string) => {
       size={isActive(navItem.route) ? '3x' : '2x'}
       color={isActive(navItem.route) ? BLUE_COLOR : FONT_COLOR}
       className={clsx(
+        'hidden md:block',
+        isActive(navItem.route)
+          ? 'text-blue dark:text-white'
+          : 'text-fontColor dark:text-slate-400'
+      )}
+      client:load
+    />
+
+    <FontAwesomeIcon
+      icon={navItem.icon}
+      size={isActive(navItem.route) ? 'xl' : 'lg'}
+      color={isActive(navItem.route) ? BLUE_COLOR : FONT_COLOR}
+      className={clsx(
+        'md:hidden',
         isActive(navItem.route)
           ? 'text-blue dark:text-white'
           : 'text-fontColor dark:text-slate-400'

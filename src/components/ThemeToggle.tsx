@@ -22,19 +22,35 @@ const ThemeToggle = () => {
   if (!isMounted) return <></>;
 
   return (
-    <button className="bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-4" onClick={handleClick}>
+    <button className="bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-3 md:p-4" onClick={handleClick}>
       {theme == "light" ? (
-        <FontAwesomeIcon
-          icon={faSun}
-          size="2x"
-          className="text-fontColor dark:text-slate-400"
-        />
+        <>
+          <FontAwesomeIcon
+            icon={faSun}
+            size="2x"
+            className="text-fontColor dark:text-slate-400 hidden md:block"
+          />
+
+          <FontAwesomeIcon
+            icon={faSun}
+            size='lg'
+            className="text-fontColor dark:text-slate-400 md:hidden"
+          />
+        </>
       ) : (
-        <FontAwesomeIcon
-          icon={faMoon}
-          size="2x"
-          className="text-fontColor dark:text-slate-400"
-        />
+        <>
+          <FontAwesomeIcon
+            icon={faMoon}
+            size="2x"
+            className="text-fontColor dark:text-slate-400 hidden md:block"
+          />
+
+          <FontAwesomeIcon
+            icon={faMoon}
+            size="lg"
+            className="text-fontColor dark:text-slate-400 md:hidden"
+          />
+        </>
       )}
     </button>
   );
