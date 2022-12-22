@@ -4,6 +4,22 @@ const getImageURL = (imageName: string) => `${imageDir}/${imageName}`;
 
 export default [
   {
+    projectName: 'Curriculum Schedular',
+    projectDescription:
+      'An automated Curriculum Schedular which prepares a schedule as per your needs. A great tool for any self-learning student!',
+    projectImageURL: getImageURL('curriculum-schedular.png'),
+    projectRepoURL: 'https://github.com/muhesh-kumar/curriculum-schedular',
+    projectLiveURL: 'https://curriculum-schedular.vercel.app/',
+  },
+  {
+    projectName: 'GitHub Downloader',
+    projectDescription:
+      'A CLI tool to download files and folders from any GitHub repo and store them in any given location. Wrriten in Typescript and NodeJS and has around 200+ Downloads in NPM Registry',
+    projectImageURL: getImageURL('github-downloader.png'),
+    projectRepoURL: 'https://github.com/muhesh-kumar/gh-downloader',
+    projectLiveURL: 'https://www.npmjs.com/package/gh-downloader',
+  },
+  {
     projectName: 'LeetCode AC Count',
     projectDescription:
       'The extension displays solved count for each difficulty of any tag in LeetCode. The extension is built to support both Mozilla Firefox and Google Chrome and it is also available as a Firefox Browser Add-On. Increased student productivity when solving problems topic-wise.',
