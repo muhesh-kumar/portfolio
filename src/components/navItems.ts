@@ -26,7 +26,7 @@ export default [
   },
   {
     icon: faRoad,
-    route: '/journey',
+    route: '/experience',
   },
   {
     icon: faTrophy,

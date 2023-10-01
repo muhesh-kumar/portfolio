@@ -1,0 +1,10 @@
+---
+export interface Props {
+  skillName: string;
+}
+const { skillName } = Astro.props;
+---
+
+<p class="rounded-full bg-[#193656] px-5 py-2">
+  {skillName}
+</p>

@@ -1,0 +1,30 @@
+---
+import Heading from '@elements/Heading.astro';
+import Layout from '@layouts/Layout.astro';
+import ExperienceCard from '@components/ExperienceCard.astro';
+import experienceData from '@data/experienceData.ts';
+
+import '@/base.css';
+---
+
+<Layout>
+  <div class="flex flex-col gap-20">
+    <div class="flex flex-col gap-5">
+      <Heading>Experience💡</Heading>
+    </div>
+    <div class="flex flex-col gap-10">
+      {
+        experienceData.map((experience) => (
+          <ExperienceCard
+            experienceStart={experience.experienceStart}
+            experienceEnd={experience.experienceEnd}
+            companyName={experience.companyName}
+            role={experience.role}
+            description={experience.description}
+            skills={experience.skills}
+          />
+        ))
+      }
+    </div>
+  </div>
+</Layout>
