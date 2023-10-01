@@ -1,7 +1,7 @@
 ---
 import SkillPill from './elements/SkillPill.astro';
 
-export interface Props {
+export interface ExperienceCardProps {
   experienceStart: string;
   experienceEnd: string;
   companyName: string;
@@ -20,21 +20,25 @@ const {
 } = Astro.props;
 ---
 
-<div class="grid grid-cols-4 gap-4">
-  <p class="col-span-1 font-bold text-2xl opacity-60">
-    {experienceStart} - {experienceEnd}
+<div
+  class="flex flex-col lg:grid lg:grid-cols-4 gap-4 rounded-lg p-6 hover:bg-[#f9f9f9] dark:hover:bg-experienceCardHoverColor hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] transition-all duration-500 ease-in-out"
+>
+  <p class="lg:col-span-1 font-bold text-2xl opacity-80 dark:opacity-60">
+    {experienceStart}
+    {experienceEnd !== '' ? '-' : ''}
+    {experienceEnd}
   </p>
-  <div class="col-start-2 col-span-3 flex flex-col gap-3">
+  <div class="lg:col-start-2 lg:col-span-3 flex flex-col gap-5">
     <div class="flex flex-col">
       <h2 class="font-bold text-2xl">
         {companyName}
       </h2>
-      <p class="font-bold opacity-60">{role}</p>
+      <p class="font-bold opacity-80 dark:opacity-60">{role}</p>
     </div>
     <p>{description}</p>
-    <div class="flex gap-3">
+    <div class="flex gap-3 flex-wrap">
       {
-        skills.map((skill) => {
+        skills.map((skill: string) => {
           return <SkillPill skillName={skill} />;
         })
       }

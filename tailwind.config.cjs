@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         darkBackground: '#1F2937',
         darkBottomBarBackground: '#111827',
+        experienceCardHoverColor: '#11182760',
+        skillPillDarkColor: '#193656',
         blue: '#188aec',
         fontColor: '#4b5563',
         bottomBarIconBgColor: '#f3f4f6',
