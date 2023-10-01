@@ -4,6 +4,14 @@ const getImageURL = (imageName: string) => `${imageDir}/${imageName}`;
 
 export default [
   {
+    projectName: 'Parkify',
+    projectDescription:
+      'An IoT based Smart Parking System with a Dashboard and Real-Time Logs that seamlessly integrates with the Raspberry-pi hardware. ',
+    projectImageURL: getImageURL('parkify.jpeg'),
+    projectRepoURL: 'https://github.com/muhesh-kumar/parkify',
+    projectLiveURL: 'https://parkify.vercel.app/',
+  },
+  {
     projectName: 'Curriculum Schedular',
     projectDescription:
       'An automated Curriculum Schedular which prepares a schedule as per your needs. A great tool for any self-learning student!',

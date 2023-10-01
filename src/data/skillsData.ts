@@ -41,8 +41,16 @@ export default [
         skillImageName: 'sass.png',
       },
       {
+        skillName: 'TailwindCSS',
+        skillImageName: 'tailwind-css.svg',
+      },
+      {
         skillName: 'ReactJS',
         skillImageName: 'react.png',
+      },
+      {
+        skillName: 'NextJS',
+        skillImageName: 'nextjs.svg',
       },
     ],
   },
