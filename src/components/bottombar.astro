@@ -2,6 +2,7 @@
 import BottombarIcon from '@elements/bottom-bar-icon.astro';
 import ThemeToggle from '@components/theme-toggle';
 import navItems from './nav-items';
+import Tooltip from '@elements/tooltip.astro';
 ---
 
 <!-- TODO: make it responsive for extra small devices -->
@@ -10,5 +11,8 @@ import navItems from './nav-items';
 >
   {navItems.map((navItem) => <BottombarIcon navItem={navItem} />)}
   <div class="border-l border-fontColor h-12"></div>
-  <ThemeToggle client:load />
+  <div class="group relative">
+    <ThemeToggle client:load />
+    <Tooltip text="Theme" />
+  </div>
 </div>

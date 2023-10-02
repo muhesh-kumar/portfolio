@@ -2,14 +2,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { motion } from 'framer-motion';
-import cn from '@utils/classnames';
 
+import Tooltip from '@elements/tooltip.astro';
+import cn from '@utils/classnames';
 import { BLUE_COLOR, FONT_COLOR } from '@constants/index';
 
 export interface Props {
   navItem: {
     route: string;
     icon: IconProp;
+    pageName: string;
   };
 }
 
@@ -28,7 +30,7 @@ const isActive = (pathName: string) => {
 <a href={navItem.route}>
   <motion.div
     className={cn(
-      'bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-3 md:p-4',
+      'bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-3 md:p-4 group relative',
       isActive(navItem.route) ? 'fa-bounce dark:bg-blue px-3 py-4' : '',
     )}
     client:load
@@ -58,5 +60,7 @@ const isActive = (pathName: string) => {
       )}
       client:load
     />
+
+    <Tooltip text={navItem.pageName} />
   </motion.div>
 </a>
