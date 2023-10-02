@@ -1,3 +1,4 @@
 import { LOCAL_IMAGES_DIR } from '@constants/index';
 
-export default (imageName: string) => LOCAL_IMAGES_DIR + imageName;
+export default (imageName: string): string =>
+  imageName === '' ? '' : LOCAL_IMAGES_DIR + imageName;

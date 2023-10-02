@@ -51,6 +51,7 @@ export default [
       {
         skillName: 'NextJS',
         skillImageName: 'nextjs.svg',
+        darkSkillImageName: 'nextjs-dark.png',
       },
     ],
   },
@@ -64,6 +65,7 @@ export default [
       {
         skillName: 'ExperssJS',
         skillImageName: 'express.png',
+        darkSkillImageName: 'express-dark.png',
       },
       {
         skillName: 'MongoDB',

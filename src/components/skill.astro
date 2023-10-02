@@ -1,17 +1,33 @@
 ---
+import cn from '@utils/classnames';
 export interface Props {
   skillImageUrl: string;
+  skillDarkImageUrl?: string;
   skillName: string;
 }
 
-const { skillImageUrl, skillName } = Astro.props;
+const { skillImageUrl, skillDarkImageUrl, skillName } = Astro.props;
 ---
 
 <div class="flex flex-col items-center justify-center gap-2 lg:gap-8">
+  <!-- Light theme image -->
   <img
     src={skillImageUrl}
     alt={`${skillName} Logo`}
-    class="w-200 h-20 lg:w-40 lg:h-40"
+    class={cn(
+      'w-200 h-20 lg:w-40 lg:h-40',
+      skillDarkImageUrl !== '' ? 'dark:hidden' : '',
+    )}
   />
+  <!-- Dark theme image -->
+  {
+    skillDarkImageUrl !== '' && (
+      <img
+        src={skillDarkImageUrl}
+        class="hidden dark:flex w-200 h-20 lg:w-40 lg:h-40"
+        alt={`${skillName} Logo`}
+      />
+    )
+  }
   <h2 class="">{skillName}</h2>
 </div>

@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { motion } from 'framer-motion';
-import { clsx } from 'clsx';
+import cn from '@utils/classnames';
 
 import { BLUE_COLOR, FONT_COLOR } from '@constants/index';
 
@@ -27,9 +27,9 @@ const isActive = (pathName: string) => {
 
 <a href={navItem.route}>
   <motion.div
-    className={clsx(
+    className={cn(
       'bg-bottomBarIconBgColor dark:bg-darkBackground rounded-2xl p-3 md:p-4',
-      isActive(navItem.route) && 'fa-bounce dark:bg-blue px-3 py-4'
+      isActive(navItem.route) ? 'fa-bounce dark:bg-blue px-3 py-4' : '',
     )}
     client:load
   >
@@ -37,11 +37,11 @@ const isActive = (pathName: string) => {
       icon={navItem.icon}
       size={isActive(navItem.route) ? '3x' : '2x'}
       color={isActive(navItem.route) ? BLUE_COLOR : FONT_COLOR}
-      className={clsx(
+      className={cn(
         'hidden md:block',
         isActive(navItem.route)
           ? 'text-blue dark:text-white'
-          : 'text-fontColor dark:text-slate-400'
+          : 'text-fontColor dark:text-slate-400',
       )}
       client:load
     />
@@ -50,11 +50,11 @@ const isActive = (pathName: string) => {
       icon={navItem.icon}
       size={isActive(navItem.route) ? 'xl' : 'lg'}
       color={isActive(navItem.route) ? BLUE_COLOR : FONT_COLOR}
-      className={clsx(
+      className={cn(
         'md:hidden',
         isActive(navItem.route)
           ? 'text-blue dark:text-white'
-          : 'text-fontColor dark:text-slate-400'
+          : 'text-fontColor dark:text-slate-400',
       )}
       client:load
     />
