@@ -1,5 +1,5 @@
 ---
-import SkillPill from './elements/SkillPill.astro';
+import SkillPill from '@elements/skill-pill.astro';
 
 export interface ExperienceCardProps {
   experienceStart: string;
@@ -35,7 +35,7 @@ const {
       </h2>
       <p class="font-bold opacity-80 dark:opacity-60">{role}</p>
     </div>
-    <p>{description}</p>
+    <p class="text-md font-medium">{description}</p>
     <div class="flex gap-3 flex-wrap">
       {
         skills.map((skill: string) => {

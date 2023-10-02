@@ -1,5 +1,5 @@
 ---
-import Btn from '@elements/Btn.astro';
+import Btn from '@elements/btn.astro';
 
 export interface Props {
   projectName: string;
@@ -38,7 +38,10 @@ const {
       </div>
     </div>
   </div>
-  <div class="lg:flex colspan-2 lg:colspan-1 hidden" style={{ order: imageOrder }}>
+  <div
+    class="lg:flex colspan-2 lg:colspan-1 hidden"
+    style={{ order: imageOrder }}
+  >
     <a href={projectLiveURL}>
       <img
         src={`${projectImageURL}`}
